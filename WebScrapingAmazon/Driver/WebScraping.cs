@@ -53,8 +53,6 @@ namespace WebScrapingAmazon.Driver
 
             inputElement.SendKeys(Keys.Enter);
 
-            /*WebElement search = driver.FindElement(By.Id("nav-search-submit-button"));
-            search.Click();*/
             Thread.Sleep(2000);
 
 
@@ -71,33 +69,36 @@ namespace WebScrapingAmazon.Driver
                     PriceAux = "";
 
 
-                    if (util.Exist(driver, By.ClassName("a-size-base-plus")))
+                    if (util.Exist(By.ClassName("a-size-base-plus"), element))
                     {
                         produto.Name = element.FindElement(By.ClassName("a-size-base-plus")).Text;
                     }
 
-                    if (util.Exist(driver, By.ClassName("a-price")))
+                    if (util.Exist(By.ClassName("a-price"), element))
                     {
                         produto.Price = CheckValue(element.FindElement(By.ClassName("a-price")).Text);
                     }
 
-                    if (util.Exist(driver, By.ClassName("a-link-normal")))
+                    if (util.Exist(By.ClassName("a-link-normal"), element))
                     {
                         produto.Link = element.FindElement(By.ClassName("a-link-normal")).GetAttribute("href");
                     }
 
-                    if (util.Exist(driver, By.ClassName("s-image")))
+                    if (util.Exist(By.ClassName("s-image"), element))
                     {
                         produto.Photo = element.FindElement(By.ClassName("s-image")).GetAttribute("src");
-                    }               
+                    }
 
                     produtos.Add(produto);
                 }
 
-                if (util.Exist(driver, By.ClassName("s-pagination-next")))
+                if (util.Exist(By.ClassName("s-pagination-next"), null, driver))
                 {
                     nextPage = driver.FindElement(By.ClassName("s-pagination-next")).GetAttribute("href");
-                    driver.Navigate().GoToUrl(nextPage);
+                    if (nextPage != null)
+                    {
+                        driver.Navigate().GoToUrl(nextPage);
+                    }
                     Thread.Sleep(2000);
                 }
             }
@@ -118,10 +119,6 @@ namespace WebScrapingAmazon.Driver
                     }
                 }
             }
-        }
-        public List<Product> GetProductPages(int qtdPages)
-        {
-            return null;
         }
         public string CheckValue(string value)
         {

@@ -6,9 +6,17 @@ namespace Utils
 {
     public class Util
     {
-        public bool Exist(IWebDriver driver, By elemento)
+        public bool Exist(By by, IWebElement element = null, IWebDriver driver = null)
         {
-            return driver.FindElements(elemento).Any();
+            if (driver != null)
+            {
+                return driver.FindElements(by).Any();
+            }
+            else if (element != null)
+            {
+                return element.FindElements(by).Any();
+            }
+            else { return false; }
         }
         public void CloseDriver(IWebDriver driver)
         {

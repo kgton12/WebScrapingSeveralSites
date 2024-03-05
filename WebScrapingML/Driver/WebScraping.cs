@@ -88,7 +88,7 @@ namespace WebScrapingML.Driver
                     produtos.Add(produto);
                 }
 
-                if (util.Exist(driver, By.XPath(@"//*[@id='root-app']/div/div[3]/section/nav/ul/li[12]/a")))
+                if (util.Exist(By.XPath(@"//*[@id='root-app']/div/div[3]/section/nav/ul/li[12]/a"),null, driver))
                 {
                     nextPage = driver.FindElement(By.XPath(@"//*[@id='root-app']/div/div[3]/section/nav/ul/li[12]/a")).GetAttribute("href");
                     driver.Navigate().GoToUrl(nextPage);
@@ -120,7 +120,7 @@ namespace WebScrapingML.Driver
                     produtos.Add(produto);
                 }
 
-                if (util.Exist(driver, By.XPath(@"//*[@id='root-app']/div/div[3]/section/nav/ul/li[12]/a")))
+                if (util.Exist(By.XPath(@"//*[@id='root-app']/div/div[3]/section/nav/ul/li[12]/a"), null, driver))
                 {
                     nextPage = driver.FindElement(By.XPath(@"//*[@id='root-app']/div/div[3]/section/nav/ul/li[12]/a")).GetAttribute("href");
                     driver.Navigate().GoToUrl(nextPage);
