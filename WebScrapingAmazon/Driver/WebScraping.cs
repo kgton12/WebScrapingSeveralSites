@@ -9,7 +9,7 @@ namespace WebScrapingAmazon.Driver
 {
     public class WebScraping
     {
-        IWebDriver driver = null;
+        ChromeDriver? driver = null;
         public WebScraping()
         {
             if (driver == null)
@@ -26,11 +26,9 @@ namespace WebScrapingAmazon.Driver
             List<Product> produtos = new List<Product>();
             var util = new Util();
 
-            //string layout = null;
             Console.WriteLine("Iniciando");
             driver.Navigate().GoToUrl(link);
             Thread.Sleep(2000);
-
 
             /* string tessDataPath = @"C:\Program Files\Tesseract-OCR\tessdata";
 
@@ -44,9 +42,6 @@ namespace WebScrapingAmazon.Driver
              Console.WriteLine("Texto extraído da imagem:");
              Console.WriteLine(textFromImage);*/
 
-
-
-
             IWebElement inputElement = driver.FindElement(By.Id("twotabsearchtextbox"));
 
             inputElement.SendKeys(selectProduct);
@@ -55,10 +50,7 @@ namespace WebScrapingAmazon.Driver
 
             Thread.Sleep(2000);
 
-
-
-            string nextPage = null;
-            string PriceAux = null;
+            string? nextPage = null;
 
             for (int i = 0; i < qtdPages; i++)
             {
@@ -66,8 +58,6 @@ namespace WebScrapingAmazon.Driver
                 foreach (var element in elements)
                 {
                     var produto = new Product();
-                    PriceAux = "";
-
 
                     if (util.Exist(By.ClassName("a-size-base-plus"), element))
                     {

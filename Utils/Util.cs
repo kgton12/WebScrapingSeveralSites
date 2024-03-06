@@ -6,7 +6,7 @@ namespace Utils
 {
     public class Util
     {
-        public bool Exist(By by, IWebElement element = null, IWebDriver driver = null)
+        public bool Exist(By by, IWebElement? element = null, IWebDriver? driver = null)
         {
             if (driver != null)
             {
