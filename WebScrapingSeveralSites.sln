@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "..\WebScrapingSeveralSites\Utils\Utils.csproj", "{0291C248-A311-49E2-812F-FDB6FB9345A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{0291C248-A311-49E2-812F-FDB6FB9345A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingSelenium", "..\WebScrapingSeveralSites\Webscraper.io\WebScrapingSelenium.csproj", "{66B6834F-F1BA-4D9E-9402-81C8F21BBBDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingSelenium", "Webscraper.io\WebScrapingSelenium.csproj", "{66B6834F-F1BA-4D9E-9402-81C8F21BBBDB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraping4devs", "..\WebScrapingSeveralSites\WebScraping4devs\WebScraping4devs.csproj", "{BC681D8F-D193-44D8-AE32-17DFB17829EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraping4devs", "WebScraping4devs\WebScraping4devs.csproj", "{BC681D8F-D193-44D8-AE32-17DFB17829EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingAmazon", "..\WebScrapingSeveralSites\WebScrapingAmazon\WebScrapingAmazon.csproj", "{80DD2546-B95E-448B-881A-97F69C39AB25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingAmazon", "WebScrapingAmazon\WebScrapingAmazon.csproj", "{80DD2546-B95E-448B-881A-97F69C39AB25}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingML", "..\WebScrapingSeveralSites\WebScrapingML\WebScrapingML.csproj", "{F3EA9A34-4584-48DA-A81A-F1B2C1D0BF4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingML", "WebScrapingML\WebScrapingML.csproj", "{F3EA9A34-4584-48DA-A81A-F1B2C1D0BF4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingShopee", "..\WebScrapingSeveralSites\WebScrapingShopee\WebScrapingShopee.csproj", "{509837F4-47FA-4FF7-8CA1-48DF488B37B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingShopee", "WebScrapingShopee\WebScrapingShopee.csproj", "{509837F4-47FA-4FF7-8CA1-48DF488B37B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingZoom", "WebScrapingZoom\WebScrapingZoom.csproj", "{15EBD6AF-E10B-4CF1-BC0E-4189601E221D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{509837F4-47FA-4FF7-8CA1-48DF488B37B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{509837F4-47FA-4FF7-8CA1-48DF488B37B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{509837F4-47FA-4FF7-8CA1-48DF488B37B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15EBD6AF-E10B-4CF1-BC0E-4189601E221D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15EBD6AF-E10B-4CF1-BC0E-4189601E221D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15EBD6AF-E10B-4CF1-BC0E-4189601E221D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15EBD6AF-E10B-4CF1-BC0E-4189601E221D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
