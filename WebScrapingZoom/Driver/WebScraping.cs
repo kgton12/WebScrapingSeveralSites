@@ -27,6 +27,10 @@ namespace WebScrapingZoom.Driver
             Console.WriteLine("Iniciando");
             driver.Navigate().GoToUrl(link);
             Thread.Sleep(2000);
+
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("document.querySelector(\".PrivacyPolicy_Button__1RxwB\").click();");
+
             var util = new Util();
 
             IWebElement inputElement = driver.FindElement(By.ClassName("AutoCompleteStyle_input__WAC2Y"));
@@ -71,8 +75,7 @@ namespace WebScrapingZoom.Driver
                 {
                     nextPage = driver.FindElement(By.XPath("//*[@id=\"__next\"]/main/div[1]/ul/li[9]/a"))/*.GetAttribute("href")*/;
                     if (nextPage != null)
-                    {
-                        IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                    {                        
                         js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
                         Thread.Sleep(1000);
                         js.ExecuteScript("document.querySelector(\"#__next > main > div.SearchPageContent_SearchPageContent__Is4eZ > ul > li:nth-child(9) > a\").click();");
