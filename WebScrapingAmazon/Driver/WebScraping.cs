@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using WebScrapingAmazon.Model;
-using Tesseract;
 using Utils;
 
 
@@ -9,17 +7,10 @@ namespace WebScrapingAmazon.Driver
 {
     public class WebScraping
     {
-        ChromeDriver? driver = null;
+        IWebDriver? driver = null;
         public WebScraping()
         {
-            if (driver == null)
-            {
-                ChromeOptions options = new ChromeOptions();
-                //options.AddArgument("--headless");
-                options.AddArgument(@"--user-agent=(Windows NT 10.0; Win64; x64) Chrome/92.0.4515.159");
-                driver = new ChromeDriver(options);
-                //driver = new ChromeDriver();
-            }
+            driver = new Util().InitDriver();
         }
         public string GetProduct(string link, string selectProduct, int qtdPages)
         {
@@ -96,20 +87,7 @@ namespace WebScrapingAmazon.Driver
             util.SaveToCsv(produtos, @"C:\Users\kgton\Desktop\AZ.csv");
 
             return "";
-        }
-        static string DoOCR(string tessDataPath, string imagePath)
-        {
-            using (var engine = new TesseractEngine(tessDataPath, "eng", EngineMode.Default))
-            {
-                using (var img = Pix.LoadFromFile(imagePath))
-                {
-                    using (var page = engine.Process(img))
-                    {
-                        return page.GetText();
-                    }
-                }
-            }
-        }
+        } 
         public string CheckValue(string value)
         {
             return value.Replace("\r\n", ",");

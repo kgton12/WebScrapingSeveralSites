@@ -1,6 +1,5 @@
 ﻿
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using WebScraping4devs.Enum;
 using WebScraping4devs.Model;
 using Utils;
@@ -10,17 +9,11 @@ namespace WebScraping4devs.Driver
 {
     public class WebScraping
     {
+        IWebDriver driver = null;
         public WebScraping()
         {
-            if (driver == null)
-            {
-                ChromeOptions options = new ChromeOptions();
-                options.AddArgument("--headless");
-                driver = new ChromeDriver(options);
-            }
+            driver = new Util().InitDriver();
         }
-
-        IWebDriver driver = null;
         public string GetCPF(string link, int qtd, string dir)
         {
             var util = new Util();

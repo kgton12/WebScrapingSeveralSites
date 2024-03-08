@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using WebScrapingML.Model;
 using Utils;
 
@@ -11,13 +10,7 @@ namespace WebScrapingML.Driver
         IWebDriver driver = null;
         public WebScraping()
         {
-            if (driver == null)
-            {
-                /*ChromeOptions options = new ChromeOptions();
-                options.AddArgument("--headless");
-                driver = new ChromeDriver(options);*/
-                driver = new ChromeDriver();
-            }
+            driver = new Util().InitDriver();
         }
         public string GetProduct(string link, string selectProduct)
         {
