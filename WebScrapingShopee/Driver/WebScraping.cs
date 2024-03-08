@@ -9,7 +9,7 @@ namespace WebScrapingShopee.Driver
         IWebDriver driver = null;
         public WebScraping()
         {
-            //driver = new Util().InitDriver();
+            driver = new Util().InitDriver();
         }
         public string GetProduct(string link, string selectProduct)
         {
