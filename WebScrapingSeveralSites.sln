@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingML", "WebScrapin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingShopee", "WebScrapingShopee\WebScrapingShopee.csproj", "{509837F4-47FA-4FF7-8CA1-48DF488B37B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebScrapingZoom", "WebScrapingZoom\WebScrapingZoom.csproj", "{15EBD6AF-E10B-4CF1-BC0E-4189601E221D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScrapingZoom-BuscaPe", "WebScrapingZoom\WebScrapingZoom-BuscaPe.csproj", "{15EBD6AF-E10B-4CF1-BC0E-4189601E221D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
